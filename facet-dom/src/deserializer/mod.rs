@@ -130,12 +130,24 @@ where
         wip: Partial<'de, BORROW>,
     ) -> Result<Partial<'de, BORROW>, DomDeserializeError<P::Error>> {
         let shape = wip.shape();
-        let struct_def = match &shape.ty {
-            Type::User(UserType::Struct(def)) => def,
-            _ => {
-                return Err(DomDeserializeError::Unsupported(
-                    "expected struct type".into(),
-                ));
+        // FIXME: is this maybe needed for other types besides structs as well? Enum etc.
+        let struct_def = if let Some(proxy) = shape.effective_proxy(Some("xml")) {
+            match &proxy.shape.ty {
+                Type::User(UserType::Struct(def)) => def,
+                _ => {
+                    return Err(DomDeserializeError::Unsupported(
+                        "expected a struct type proxy".into(),
+                    ));
+                }
+            }
+        } else {
+            match &shape.ty {
+                Type::User(UserType::Struct(def)) => def,
+                _ => {
+                    return Err(DomDeserializeError::Unsupported(
+                        "expected a struct type".into(),
+                    ));
+                }
             }
         };
 
