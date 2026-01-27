@@ -23,7 +23,7 @@ facet-core = { git = "https://github.com/facet-rs/facet", branch = "main", versi
 facet-reflect = { git = "https://github.com/facet-rs/facet", branch = "main", version = "0.43.1" }
 facet-dessert = { git = "https://github.com/facet-rs/facet", branch = "main", version = "0.43.1" }
 facet-testhelpers = { git = "https://github.com/facet-rs/facet", branch = "main", version = "0.43.1" }
-facet-assert = { git = "https://github.com/facet-rs/facet", branch = "main", version = "0.43.1" }
+rediff = { git = "https://github.com/bearcove/rediff", branch = "main" }
 
 # Local workspace crates
 facet-singularize = { path = "facet-singularize", version = "0.43.1" }
