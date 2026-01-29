@@ -45,9 +45,9 @@ http = "1.4.0"
 unexpected_cfgs = { level = "warn", check-cfg = ["cfg(facet_no_doc)"] }
 
 # Uncomment to develop
-[patch."https://github.com/facet-rs/facet"]
-facet = { path = "/Users/amos/bearcove/facet/facet" }
-facet-core = { path = "/Users/amos/bearcove/facet/facet-core" }
-facet-reflect = { path = "/Users/amos/bearcove/facet/facet-reflect" }
-facet-dessert = { path = "/Users/amos/bearcove/facet/facet-dessert" }
-facet-testhelpers = { path = "/Users/amos/bearcove/facet/facet-testhelpers" }
+# [patch."https://github.com/facet-rs/facet"]
+# facet = { path = "/Users/amos/bearcove/facet/facet" }
+# facet-core = { path = "/Users/amos/bearcove/facet/facet-core" }
+# facet-reflect = { path = "/Users/amos/bearcove/facet/facet-reflect" }
+# facet-dessert = { path = "/Users/amos/bearcove/facet/facet-dessert" }
+# facet-testhelpers = { path = "/Users/amos/bearcove/facet/facet-testhelpers" }
