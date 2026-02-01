@@ -44,7 +44,7 @@ http = "1.4.0"
 [workspace.lints.rust]
 unexpected_cfgs = { level = "warn", check-cfg = ["cfg(facet_no_doc)"] }
 
-# Uncomment to develop
+# # Uncomment to develop
 # [patch."https://github.com/facet-rs/facet"]
 # facet = { path = "/Users/amos/bearcove/facet/facet" }
 # facet-core = { path = "/Users/amos/bearcove/facet/facet-core" }
